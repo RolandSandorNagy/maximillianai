@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  padding: 22px 40px;
+  border-bottom: 1px solid var(--gray-300, #D1D5DB);
+  background: rgba(255, 255, 255, 0.30);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  height: 92px;
+  box-sizing: border-box;
+}
+.main-logo-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+h1,h2 {font-weight: bold; font-family: "ColfaxAI", Helvetica, sans-serif;}
+h1 {
+  line-height: 24px;
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 2em;
+}
+h2{font-size: 1.5em;}
+
+.scrollbar {
+  scrollbar-color: transparent;
+  scroll-behavior: smooth;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 6px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 6px;
+}
+
+.scrollbar-horizontal::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollbar-vertical::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row;
+  max-width: calc(80% - 0px);
+  width: 1320px;
+  margin: 20px auto;
+}
+
+.chat-input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+  width: 100%;
+  padding: 9px 16px 9px 44px;
+  margin-bottom: 0;
+  outline-color: #DDD;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #E7E7E7;
+}
+
+.d-none {display: none !important;}
+
+.user-message {
+  text-align: left;
+  color: black;
+  background: white;
+  padding: 24px 16px;
+  position: relative;
+  border-top: 1px solid rgba(0,0,0,.1);
+  min-height: 89.3px;
+}
+.maxi-message {
+  text-align: left;
+  color: black;
+  background: rgb(247,247,248);
+  padding: 24px 16px;
+  position: relative;
+  border-top: 1px solid rgba(0,0,0,.1);
+  min-height: 89.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.max-message:last-child {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.user-message p,
+.maxi-message div.maxi-message-wrapper {
+  max-width: calc(80% - 0px);
+  width: 1320px;
+  margin: 0 auto;
+}
+.used-source {
+  text-align: left;
+  background: rgb(247,247,248);
+  color: blue;
+}
+.used-source p {
+  max-width: calc(80% - 0px);
+  width: 1320px;
+  margin: 0 auto;
+}
