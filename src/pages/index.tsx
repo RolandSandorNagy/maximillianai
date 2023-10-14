@@ -34,6 +34,8 @@ export default function Main() {
   const toggleSuggestions = () => setSuggestionsVisible(!isSuggestionsVisible);
 
   useEffect(() => {
+    console.log('metadata');
+    console.log(metadata);
     if (outputStream.length > 0 && !isStreaming) {
       dispatch({ type: 'commit', value: outputStream, metadata });
       setShowHelperDivUser(false);
