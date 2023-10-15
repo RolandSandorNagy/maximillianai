@@ -33,7 +33,7 @@ export default function Main() {
 
   const toggleSuggestions = () => setSuggestionsVisible(!isSuggestionsVisible);
 
-  useEffect(() => {
+  useEffect(() => { 
     console.log('metadata');
     console.log(metadata);
     if (outputStream.length > 0 && !isStreaming) {
