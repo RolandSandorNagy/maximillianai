@@ -1,0 +1,9 @@
+-- CreateTable
+CREATE TABLE "ChatLastMessages" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "input" TEXT NOT NULL,
+    "output" TEXT NOT NULL,
+    "metadata" TEXT NOT NULL,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "modifiedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

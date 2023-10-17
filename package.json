@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@7-docs/edge": "^0.1.0",
+    "@prisma/client": "^5.4.2",
     "@supabase/supabase-js": "2.21.0",
     "@types/node": "^18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "autoprefixer": "10.4.14",
     "next": "^13.3.2",
+    "node-fetch": "^3.3.2",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -26,6 +28,7 @@
   },
   "devDependencies": {
     "@7-docs/cli": "^0.1.0",
-    "@types/react-syntax-highlighter": "^15.5.6"
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "prisma": "^5.4.2"
   }
 }
