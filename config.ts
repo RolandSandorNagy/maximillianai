@@ -4,6 +4,7 @@ export const completionModels = ['gpt-3.5-turbo'];
 export const namespace = 'maximillianai';
 
 export const title = 'Maximillian AI';
+export const name = 'Maxi AI';
 
 export const subject = 'concierge services';
 
