@@ -3,7 +3,7 @@ export const completionModels = ['gpt-3.5-turbo'];
 
 export const namespace = 'maximillianai';
 
-export const aiName = 'Maximillian AI';
+export const aiName = 'Maxi AI';
 export const aiTitle = 'Maxi AI';
 
 export const organization = 'Quintessentially';

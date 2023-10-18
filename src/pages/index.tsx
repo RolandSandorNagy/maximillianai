@@ -10,6 +10,7 @@ import { useStream } from '../hooks/useStream';
 import { aiName, aiTitle, suggestions } from '../../config';
 import type { FormEventHandler, ChangeEventHandler } from 'react';
 import { PrismaClient } from '@prisma/client'
+import { MissingStaticPage } from 'next/dist/shared/lib/utils';
 
 const inter = Inter({ weight: '300', subsets: ['latin'] });
 const MAIN_URL = 'http://localhost:3000';
@@ -98,6 +99,8 @@ export default function Main() {
   const updateDataInDatabase = async function () {
     const interaction = {input: conversation.input, output: outputStream, metadata: ''};
     addInteraction(interaction);
+    console.log('messageHistory');
+    console.log(messageHistory);
     await saveRecord(interaction, '/api/save-record', 'Chat');      
     //saveRecord(interaction, '/api/save-record', 'ChatLastMessages');   // TODO     
   }
@@ -135,9 +138,16 @@ export default function Main() {
   }, [conversation.input]);
 
   if(messageHistory.length == 1 && messageHistory[0] == null && gMessageHistory != null) {
-    setMessageHistory(gMessageHistory);
+    messageHistory.length = 0;
+    for(let i = 0; i < gMessageHistory.length; ++i) {
+      const msg = gMessageHistory[i];
+      messageHistory.push({input: msg.input, output: msg.output, metadata: msg.metadata});
+    }
+    setMessageHistory(messageHistory);
     console.log('gMessageHistory');
     console.log(gMessageHistory);
+    console.log('messageHistory');
+    console.log(messageHistory);
   }
 
   return (
