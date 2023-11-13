@@ -17,7 +17,7 @@ Starterkit for OpenAI chat client based on your own content. Main ingredients:
 - [Ingest content](#ingest)
 - `cp .env.example .env.local` and paste your tokens: `OPENAI_API_KEY`, `SUPABASE_URL`, `SUPABASE_API_KEY`
 
-The following commands are using `my-namespace` as set in [config.ts](./config.ts) and ingest content from the
+The following commands are using `maximillianai` as set in [config.ts](./config.ts) and ingest content from the
 `reactjs/react.dev` repository. By all means, you're encouraged to change them to something more original.
 
 ## Prepare db
@@ -28,7 +28,7 @@ The following command does not actually do anything. Instead, it gives you an al
 your [Supabase project area](https://app.supabase.com/projects)'s SQL Editor:
 
 ```shell
-npx 7d supabase-create-table --namespace my-namespace
+npx 7d supabase-create-table --namespace maximillianai
 ```
 
 ## Ingest
@@ -40,7 +40,7 @@ npx 7d ingest \
   --files 'src/content/reference/react/*.md' \
   --files 'src/content/reference/react-dom/*.md' \
   --files 'src/content/learn/*.md' \
-  --namespace my-namespace
+  --namespace maximillianai
 ```
 
 ## Run

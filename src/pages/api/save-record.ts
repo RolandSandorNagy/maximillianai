@@ -9,6 +9,8 @@ export default async function (req: any, res: any) {
     var data = req.body.data || [];
     var table = req.body.table || 'Chat';
     await _addRecord(table, data);
+    // create/update text file
+    // upload text file to supabase 
     res.status(200).json({ status: 'added', data: data });   
 }
   
