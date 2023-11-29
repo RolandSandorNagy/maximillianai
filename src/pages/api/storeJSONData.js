@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     if (req.method === 'GET') {
         var messages;
         try {
-            messages = await prisma.Chat.findMany();
+            messages = await prisma.Messages.findMany();
             console.log('messages');
             console.log(messages);
         } catch(error) {

@@ -7,7 +7,7 @@ const prisma: any = new PrismaClient();
 
 export default async function (req: any, res: any) {
     var data = req.body.data || [];
-    var table = req.body.table || 'Chat';
+    var table = req.body.table || 'Messages';
     await _addRecord(table, data);
     // create/update text file
     // upload text file to supabase 
@@ -15,8 +15,6 @@ export default async function (req: any, res: any) {
 }
   
 async function _addRecord(table: string, obj: object) {
-    console.log('obj');
-    console.log(obj);
     const message = await prisma[table].create({ data: obj })
       .then(async () => {
         await prisma.$disconnect()

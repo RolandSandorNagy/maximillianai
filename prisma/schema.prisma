@@ -10,20 +10,30 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Chat {
+model Chats {
+  id         Int      @id @default(autoincrement())
+  title      String
+  createdAt  DateTime @default(now())
+  modifiedAt DateTime @default(now())
+}
+
+model Messages {
   id         Int      @id @default(autoincrement())
   input      String
   output     String
   metadata   String
+  chatId     Int 
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
 }
+
 
 model ChatLastMessages {
   id         Int      @id @default(autoincrement())
   input      String
   output     String
   metadata   String
+  chatId     Int 
   createdAt  DateTime @default(now())
   modifiedAt DateTime @default(now())
 }

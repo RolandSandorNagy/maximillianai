@@ -249,16 +249,50 @@ h2{font-size: 1.5em;}
   line-height: 20px;
   cursor: pointer;
 }
+.list-of-chats li.active {
+  background: #CECECE;
+}
 
-.list-of-chats li p {
+.list-of-chats li p,
+.list-of-chats li input {
   margin-left: 12px;
   max-width: calc(100% - 84px);
   overflow: hidden;
   margin-right: 8px;
 }
+.list-of-chats li input {
+  display: none;
+  padding: 2px 8px;
+}
+.list-of-chats li.editing p {
+  width: 100%;
+  display: none;
+}
+.list-of-chats li.editing input {
+  width: 100%;
+  display: block;
+}
 .list-of-chats li p span {
   display: block;
   width: max-content;
+}
+.list-of-chats li svg { 
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.list-of-chats li svg path { 
+  pointer-events: none;
+  stroke: #4B5565;
+  transition: all 0.3s ease-in-out;
+}
+.list-of-chats li svg:not(.basic-svg):hover { 
+  background: #4B5565;
+}
+.list-of-chats li svg:not(.basic-svg):hover path { 
+  stroke: #FFFFFF;
+}
+.list-of-chats li.editing svg.delete-chat {
+  display: none; 
 }
 
 .scrollbar::-webkit-scrollbar-track {

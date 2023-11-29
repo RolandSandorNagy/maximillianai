@@ -32,7 +32,7 @@ const FETCH_SETITNGS = {
   },
   body: JSON.stringify({line: 'this is the test content.'})
 };
-const r = fetch('http://localhost:3000/api/mw', FETCH_SETITNGS);
+//const r = fetch('http://localhost:3000/api/mw', FETCH_SETITNGS);
 
 //let xhttp = new XMLHttpRequest();
 //xhttp.open("POST", "ajax_test.asp");
@@ -46,7 +46,6 @@ const r = fetch('http://localhost:3000/api/mw', FETCH_SETITNGS);
 //const data = readFileSync(file, 'utf8');
 //console.log('data');
 //console.log(data);
-
 
 
 export default getCompletionHandler({ OPENAI_API_KEY, query, system, prompt });

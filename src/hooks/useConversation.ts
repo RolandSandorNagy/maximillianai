@@ -17,6 +17,11 @@ export interface Conversation extends Interaction {
 
 type ActionType =
   | {
+    type: 'update';
+    value: any[];
+    metadata: StreamMetaData[] | null;
+  }
+  | {
     type: 'setInput';
     value: string;
   }
@@ -33,6 +38,12 @@ const initialState = { input: '', output: '', history: [] };
 
 const conversationReducer: Reducer<Conversation, ActionType> = (state, action) => {
   switch (action.type) {
+    case 'update':
+      return {
+        input: '',
+        output: '',
+        history: action.value,
+      };
     case 'setInput':
       return { ...state, input: action.value };
     case 'commit':
